@@ -35,7 +35,9 @@
 
 ## Version History
 ### v1.0 - Initial Release 
-- **Release Date** 
-- **APK** 
+- **Release Date** 09-03-2026
+- **APK** TellUs_v1.0.apk
 - **Changes:**
-  - 
+  - initial release
+  - basic app setup
+  - core features implemented
