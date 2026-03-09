@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Tell Us</string>
+    <string-array name="category_array">
+        <item>Feature Request</item>
+        <item>Bug Report</item>
+    </string-array>
 </resources>

@@ -20,20 +20,20 @@
 ---
 
 ## 4. Issues & Fixes
-- **Issue:** 
-  **Fix:** 
+- **Issue:** app crashes when add feedback clicked on home
+  **Fix:** explicitly setting theme for AddFeedbackActivity
 
 ---
 
 ## 5. Key Learnings
-- implementing splash screen
-- use of Firebase database
+- Implementing splash screen
+- Use of Firebase database
+- Implementing swipe to refresh
 
 ## 6. Future Updates
-- 
+- Deletion/editing of feedback
 
 ## Version History
-
 ### v1.0 - Initial Release 
 - **Release Date** 
 - **APK** 

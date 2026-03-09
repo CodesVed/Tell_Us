@@ -1,5 +1,7 @@
 package com.example.feedbackcollectorsystem.activities
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,7 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isEmpty
 import androidx.recyclerview.widget.RecyclerView
-import com.example.feedbackcollectorsystem.FeedbackData
+import com.example.feedbackcollectorsystem.models.FeedbackData
 import com.example.feedbackcollectorsystem.R
 import com.example.feedbackcollectorsystem.adapters.FeedbackAdapter
 import com.example.feedbackcollectorsystem.databinding.ActivityMainBinding
@@ -42,6 +44,17 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         fetchData()
+
+        binding.addFeedback.setOnClickListener {
+            val intent = Intent(this, AddFeedbackActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.swipeRefresh.setOnRefreshListener {
+            dataList.clear()
+            fetchData()
+            binding.swipeRefresh.isRefreshing = false
+        }
     }
 
     private fun fetchData() {

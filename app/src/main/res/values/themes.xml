@@ -8,7 +8,7 @@
     <style name="Theme.FeedbackCollectorSystem" parent="Base.Theme.FeedbackCollectorSystem" />
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/blue_light</item>
+        <item name="windowSplashScreenBackground">@color/blue_light2</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/feedback_app_icon</item>
         <item name="postSplashScreenTheme">@style/Theme.FeedbackCollectorSystem</item>
     </style>

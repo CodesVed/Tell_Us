@@ -1,12 +1,15 @@
 package com.example.feedbackcollectorsystem.adapters
 
 import android.app.Activity
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.graphics.toColor
 import androidx.recyclerview.widget.RecyclerView
-import com.example.feedbackcollectorsystem.FeedbackData
+import com.example.feedbackcollectorsystem.models.FeedbackData
 import com.example.feedbackcollectorsystem.R
 import com.google.android.material.chip.Chip
 import java.text.SimpleDateFormat
@@ -36,7 +39,14 @@ class FeedbackAdapter(val context: Activity, val arrayList: ArrayList<FeedbackDa
         val currentItem = arrayList[position]
         holder.title.text = currentItem.title
         holder.description.text = currentItem.description
+
+        val category = currentItem.category
         holder.category.text = currentItem.category
+        if (category == "Feature Request"){
+            holder.category.setChipBackgroundColorResource(R.color.green)
+        } else if (category == "Bug Report"){
+            holder.category.setChipBackgroundColorResource(R.color.red)
+        }
 
         val timestamp = currentItem.timestamp
         if (timestamp != null){
